@@ -1,0 +1,16 @@
+{
+  "mata_kuliah": [
+    {
+      "kode_matakuliah": "CRI-2C4",
+      "nama_matakuliah": "Konstruksi Perangkat Lunak"
+    },
+    {
+      "kode_matakuliah": "CCK2IAB3",
+      "nama_matakuliah": "Dasar Jaringan Komputer"
+    },
+    {
+      "kode_matakuliah": "CCK2HAB4",
+      "nama_matakuliah": "Basis Data"
+    }
+  ]
+}
