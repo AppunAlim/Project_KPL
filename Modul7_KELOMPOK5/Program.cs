@@ -37,13 +37,53 @@ namespace TP7
             }
         }
     }
-
-    public class Program
+    public class KuliahMahasiswa_103022400058
     {
-        public static void Main(string[] args)
+        public class MataKuliah
         {
-            DataMahasiswa_103022400058 data = new DataMahasiswa_103022400058();
-            data.ReadJSON();
+            public string kode_matakuliah { get; set; }
+            public string nama_matakuliah { get; set; }
+        }
+
+        public class DataKuliah
+        {
+            public List<MataKuliah> mata_kuliah { get; set; }
+        }
+
+        public void ReadJSON()
+        {
+            string filePath = "tp7_2_103022400058.json";
+
+            try
+            {
+                string jsonString = File.ReadAllText(filePath);
+
+                DataKuliah data = JsonSerializer.Deserialize<DataKuliah>(jsonString);
+
+                Console.WriteLine("Daftar mata kuliah yang diambil:");
+                int counter = 1;
+
+                foreach (var mk in data.mata_kuliah)
+                {
+                    Console.WriteLine($"MK {counter} {mk.kode_matakuliah} - {mk.nama_matakuliah}");
+                    counter++;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Terjadi error : " + ex.Message);
+            }
+        }
+
+        public class Program
+        {
+            public static void Main(string[] args)
+            {
+                DataMahasiswa_103022400058 data = new DataMahasiswa_103022400058();
+                KuliahMahasiswa_103022400058 kuliah = new KuliahMahasiswa_103022400058();
+                data.ReadJSON();
+                kuliah.ReadJSON();
+            }
         }
     }
 }
