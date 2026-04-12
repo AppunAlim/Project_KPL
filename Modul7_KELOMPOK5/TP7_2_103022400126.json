@@ -1,0 +1,12 @@
+﻿{
+  "mata_kuliah": [
+    {
+      "kode_matakuliah": "KPL101",
+      "nama_matakuliah": "Konstruksi Perangkat Lunak"
+    },
+    {
+      "kode_matakuliah": "AKA202",
+      "nama_matakuliah": "Analisis Kompleksitas Algoritma"
+    }
+  ]
+}
